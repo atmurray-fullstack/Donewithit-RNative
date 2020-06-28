@@ -1,5 +1,7 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, View, Image, Text } from 'react-native';
+import LoginButton from '../../components/LoginButton/LoginButton';
+import RegisterButton from '../../components/RegisterButton/RegisterButton';
 function WelcomeScreen(props) {
     return (
         <ImageBackground style={styles.background}
@@ -9,8 +11,8 @@ function WelcomeScreen(props) {
                 <Text>Sell what you don't need</Text>
 
             </View>
-            <View style={styles.loginButton}></View>
-            <View style={styles.registerButton}></View>
+            <LoginButton />
+            <RegisterButton />
         </ImageBackground>
     )
 }
