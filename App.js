@@ -7,12 +7,14 @@ import WelcomeScreen from './app/assets/screens/WelcomeScreen';
 import ViewImageScreen from "./app/assets/screens/ViewImageScreen"
 import { MaterialCommunityIcons } from "@expo/vector-icons"
 import LoginButton from './app/components/LoginButton/LoginButton';
+import Card from './app/components/Card/Card';
 
 export default function App() {
   return (
-    <WelcomeScreen>
+    <Card />
+    // <WelcomeScreen>
 
-    </WelcomeScreen>
+    // </WelcomeScreen>
   );
 }
 
