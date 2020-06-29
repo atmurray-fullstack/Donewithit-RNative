@@ -4,19 +4,16 @@ import colors from '../../assets/config/colors'
 
 
 const styles = StyleSheet.create({
-    cardView: {
-        height: 400,
-        width: 700,
+    imagebgd: {
+        height: "32%",
+        width: "65%",
         borderRadius: 25,
-        marginTop: 20,
-        marginLeft: 50,
         overflow: "hidden"
-
     },
 
     titles: {
-        backgroundColor: "orange",
-        height: "30%",
+        backgroundColor: "white",
+        height: "20%",
         width: "100%",
         position: "absolute",
         bottom: 0,
