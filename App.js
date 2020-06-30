@@ -8,13 +8,28 @@ import ViewImageScreen from "./app/assets/screens/ViewImageScreen"
 import { MaterialCommunityIcons } from "@expo/vector-icons"
 import LoginButton from './app/components/LoginButton/LoginButton';
 import Card from './app/components/Card/Card';
+import AppButton from './app/components/AppButton/AppButton';
 
 export default function App() {
   return (
-    <Card />
-    // <WelcomeScreen>
+    <View style={{
+      backgroundColor: "#f8f4f4",
+      padding: 20,
+      paddingTop: 100,
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center"
 
-    // </WelcomeScreen>
+    }} >
+      <Card title="Red Jacket for Sale" subtitle="$100" image="./app/assets/jacket.jpg" />
+    </View>
+    // <WelcomeScreen />
+
+    // <ViewImageScreen>
+
+    // </ViewImageScreen>
+
+
   );
 }
 
