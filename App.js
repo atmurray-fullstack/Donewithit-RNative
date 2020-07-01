@@ -11,16 +11,16 @@ import Card from './app/components/Card/Card';
 import AppButton from './app/components/AppButton/AppButton';
 import ListDetailsScreen from './app/assets/screens/ListingDetailsScreen'
 import ListItem from './app/components/ListItem/ListItem'
-
+import MessageScreen from './app/assets/screens/MessageScreen'
 export default function App() {
   return (
-    <ListDetailsScreen />
+    <MessageScreen />
+    // <ListDetailsScreen /> 
 
     // <WelcomeScreen />
 
-    // <ViewImageScreen>
+    // <ViewImageScreen />
 
-    // </ViewImageScreen>
 
 
   );

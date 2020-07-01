@@ -1,0 +1,53 @@
+import React from 'react';
+import { FlatList, StyleSheet, View } from 'react-native';
+
+import ListItemSeperator from '../../components/ListItemSeperator/ListItemSeperator'
+import ListItem from '../../components/ListItem/ListItem'
+import ListItemDeleteAction from '../../components/ListItemDeleteAction/ListItemDeleteAction'
+import Screen from '../../components/Screen/Screen'
+import colors from '../config/colors'
+
+const messages = [
+    {
+        id: 1,
+        title: 'T2',
+        description: 'D2',
+        image: require('../../assets/tongue.png')
+    },
+    {
+        id: 2,
+        title: 'T1',
+        description: 'D1',
+        image: require('../../assets/tongue.png')
+    }
+]
+
+const MessageScreen = () => {
+    return (
+        <Screen>
+            <FlatList
+                data={messages}
+                keyExtractor={(message) => message.id.toString()}
+                renderItem={({ item }) => (
+                    <ListItem
+                        title={item.title}
+                        subtitle={item.description}
+                        image={item.image}
+                        onPress={() => console.log("message selected", item)}
+                        renderRightActions={() =>
+                            <ListItemDeleteAction onPress={() => console.log(item)} />}
+                    />
+                )}
+                ItemSeparatorComponent={ListItemSeperator}
+            />
+
+        </Screen>
+    );
+}
+
+export default MessageScreen;
+
+const styles = StyleSheet.create({
+
+
+});

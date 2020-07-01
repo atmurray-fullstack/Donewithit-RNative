@@ -6,8 +6,8 @@ import colors from '../config/colors'
 const ViewImageScreen = () => {
     return (
         <View style={styles.container}>
-            <MaterialCommunityIcons name={"close"} size={35} style={styles.closeIcon} />
-            <MaterialCommunityIcons name={"trash-can-outline"} size={35} style={styles.deleteIcon} />
+            <MaterialCommunityIcons name={"close"} size={45} style={styles.closeIcon} />
+            <MaterialCommunityIcons name={"trash-can-outline"} size={45} style={styles.deleteIcon} />
             <Image resizeMode="contain" style={styles.chairImage} source={require("../../assets/chair.jpg")} />
         </View>
     );

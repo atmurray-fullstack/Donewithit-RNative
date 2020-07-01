@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
 
     container: {
         flexDirection: 'row',
+        padding: 30,
     },
     image: {
         width: 70,
@@ -14,6 +15,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontWeight: '500',
+        color: colors.black,
 
     },
     subtitle: {
