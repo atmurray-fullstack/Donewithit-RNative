@@ -9,20 +9,13 @@ import { MaterialCommunityIcons } from "@expo/vector-icons"
 import LoginButton from './app/components/LoginButton/LoginButton';
 import Card from './app/components/Card/Card';
 import AppButton from './app/components/AppButton/AppButton';
+import ListDetailsScreen from './app/assets/screens/ListingDetailsScreen'
+import ListItem from './app/components/ListItem/ListItem'
 
 export default function App() {
   return (
-    <View style={{
-      backgroundColor: "#f8f4f4",
-      padding: 20,
-      paddingTop: 100,
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center"
+    <ListDetailsScreen />
 
-    }} >
-      <Card title="Red Jacket for Sale" subtitle="$100" image="./app/assets/jacket.jpg" />
-    </View>
     // <WelcomeScreen />
 
     // <ViewImageScreen>

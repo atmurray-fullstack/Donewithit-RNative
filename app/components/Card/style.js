@@ -7,33 +7,33 @@ const styles = StyleSheet.create({
     cardView: {
         justifyContent: "center",
         alignItems: "center",
-        flex: 1,
-        height: "35%",
+        height: "45%",
         width: "75%",
         overflow: "hidden",
-        borderRadius: "10%",
+        borderRadius: 10,
+        marginBottom: 20,
     },
     image: {
         height: "70%",
         width: "100%",
-        overflow: "hidden"
+        borderRadius: 10,
 
     },
     titles: {
         backgroundColor: "white",
-        height: "20%",
+        height: "30%",
         width: "100%",
         position: "absolute",
         bottom: 0,
     },
     cardTitle: {
-        fontSize: 24,
+        fontSize: 22,
         color: colors.black,
         marginLeft: 25,
         marginTop: 10,
     },
     cardsubTitle: {
-        fontSize: 20,
+        fontSize: 18,
         color: colors.secondary,
         fontWeight: "bold",
         marginLeft: 25,
