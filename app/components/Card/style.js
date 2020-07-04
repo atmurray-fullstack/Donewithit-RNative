@@ -5,13 +5,14 @@ import colors from '../../assets/config/colors'
 
 const styles = StyleSheet.create({
     cardView: {
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignItems: "center",
-        height: "45%",
-        width: "75%",
+        height: 400,
+        width: 400,
         overflow: "hidden",
         borderRadius: 10,
         marginBottom: 20,
+        paddingHorizontal: 10,
     },
     image: {
         height: "70%",

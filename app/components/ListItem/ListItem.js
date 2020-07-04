@@ -11,17 +11,18 @@ import { render } from 'react-dom';
 
 
 
-const ListItem = ({ title, subtitle, image, onPress, renderRightActions }) => {
+const ListItem = ({ title, subtitle, image, onPress, IconComponent, renderRightActions }) => {
     return (
         <Swipeable renderRightActions={renderRightActions}>
             <TouchableHighlight
                 underlayColor={colors.light}
                 onPress={onPress}>
                 <View style={styles.container} >
-                    <Image style={styles.image} source={require('../../assets/tongue.png')} />
-                    <View>
+                    {IconComponent}
+                    {image && <Image style={styles.image} source={image} />}
+                    <View style={styles.detailContainer}>
                         <AppText style={styles.title}>{title}</AppText>
-                        <AppText style={styles.subtitle}>{subtitle}</AppText>
+                        {subtitle && <AppText style={styles.subtitle}>{subtitle}</AppText>}
                     </View>
                 </View>
             </TouchableHighlight >
