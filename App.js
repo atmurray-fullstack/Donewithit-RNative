@@ -21,18 +21,22 @@ import AppTextInput from './app/components/AppTextInput/AppTextInput';
 import AppPicker from './app/components/AppPicker/AppPicker'
 
 export default function App() {
-
-  const catergories = [
+  const categories = [
     { label: 'Furniture', value: 1 },
     { label: 'Clothing', value: 2 },
     { label: 'Cameras', value: 3 }
-
-
   ]
+
+  const [category, setCategory] = useState(categories[0]);
+
+
 
   return (
     <Screen>
-      <AppPicker icon='apps' placeholder='Category' />
+      <AppPicker
+        selectedItem={category}
+        onSelectedItem={item => setCategory(item)}
+        items={categories} icon='apps' placeholder='Category' />
       <AppTextInput icon='email' placeholder='Email' />
     </Screen>
 

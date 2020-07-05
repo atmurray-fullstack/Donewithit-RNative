@@ -14,10 +14,11 @@ import AppText from '../AppText/AppText'
 import colors from '../../assets/config/colors'
 import defaultStyles from '../../assets/config/styles'
 import Screen from '../Screen/Screen'
+import PickerItem from '../PickerItem/PickerItem';
 
 
 
-const AppPicker = ({ icon, items, placeholder }) => {
+const AppPicker = ({ icon, items, onSelectedItem, selectedItem, placeholder }) => {
 
     const [modalVisible, setModalVisible] = useState(false);
     return (
@@ -33,7 +34,7 @@ const AppPicker = ({ icon, items, placeholder }) => {
                             style={styles.icon}
                         />
                     )}
-                    <AppText style={styles.text}>{placeholder}</AppText>
+                    <AppText style={styles.text}>{selectedItem ? selectedItem.label : placeholder}</AppText>
                     <MaterialCommunityIcons
                         name='chevron-down'
                         size={20}
@@ -45,11 +46,20 @@ const AppPicker = ({ icon, items, placeholder }) => {
             <Modal visible={modalVisible} animationType='fade' >
                 <Screen>
                     <Button title='Close' onPress={() => setModalVisible(false)} />
-                    {/* <FlatList
+                    <FlatList
                         data={items}
                         keyExtractor={item => item.value.toString()}
-                        renderItem={({ item }) =>}
-                    /> */}
+                        renderItem={
+                            ({ item }) => (
+                                <PickerItem
+                                    label={item.label}
+                                    onPress={() => {
+                                        setModalVisible(false);
+                                        onSelectedItem(item);
+                                    }}
+                                />
+                            )}
+                    />
                 </Screen>
             </Modal>
         </>
