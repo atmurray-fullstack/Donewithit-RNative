@@ -22,6 +22,14 @@ import AppPicker from './app/components/AppPicker/AppPicker'
 
 export default function App() {
 
+  const catergories = [
+    { label: 'Furniture', value: 1 },
+    { label: 'Clothing', value: 2 },
+    { label: 'Cameras', value: 3 }
+
+
+  ]
+
   return (
     <Screen>
       <AppPicker icon='apps' placeholder='Category' />
