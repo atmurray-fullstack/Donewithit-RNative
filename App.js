@@ -19,6 +19,7 @@ import AccountScreen from './app/assets/screens/AccountScreen'
 import ListingScreen from './app/assets/screens/ListingScreen';
 import AppTextInput from './app/components/AppTextInput/AppTextInput';
 import AppPicker from './app/components/AppPicker/AppPicker'
+import LoginScreen from './app/assets/screens/LoginScreen'
 
 export default function App() {
   const categories = [
@@ -33,11 +34,7 @@ export default function App() {
 
   return (
     <Screen>
-      <AppPicker
-        selectedItem={category}
-        onSelectedItem={item => setCategory(item)}
-        items={categories} icon='apps' placeholder='Category' />
-      <AppTextInput icon='email' placeholder='Email' />
+      <LoginScreen />
     </Screen>
 
 
