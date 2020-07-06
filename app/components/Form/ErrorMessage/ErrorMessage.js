@@ -3,9 +3,7 @@ import {
     StyleSheet
 } from 'react-native';
 
-import AppText from '../../components/AppText/AppText';
-import AppTextInput from '../AppTextInput/AppTextInput';
-
+import AppText from '../../AppText/AppText';
 
 const ErrorMessage = ({ error, visible }
 ) => {

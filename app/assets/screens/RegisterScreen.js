@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-    StyleSheet,
-    Image
+    StyleSheet
 } from 'react-native';
 import * as Yup from 'yup';
 
@@ -10,23 +9,27 @@ import { AppForm, AppFormField, SubmitButton } from '../../components/Form'
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label('Email'),
-    password: Yup.string().required().min(4).label('Password')
-})
+    password: Yup.string().required().min(4).label('Password'),
+    user: Yup.string().required().min(8).label('User')
+});
 
-const LoginScreen = () => {
 
-
+const RegisterScreen = () => {
     return (
-        <Screen style={styles.container}>
-            <Image
-                source={require('../../assets/logo-red.png')}
-                style={styles.logo}
-            />
+        <Screen>
             <AppForm
-                initialValues={{ email: '', password: '' }}
+                initialValues={{ email: '', password: '', user: '' }}
                 onSubmit={(values) => console.log(values)}
                 validationSchema={validationSchema}
             >
+                <AppFormField
+                    name='user'
+                    icon='account'
+                    autoCapitalize='none'
+                    autoCorrect={false}
+                    placeholder='User'
+                    textContentType='username'
+                />
 
                 <AppFormField
                     name='email'
@@ -38,6 +41,7 @@ const LoginScreen = () => {
                     textContentType='emailAddress'
 
                 />
+
                 <AppFormField
                     name='password'
                     icon='lock'
@@ -54,24 +58,14 @@ const LoginScreen = () => {
 
             </AppForm>
         </Screen>
+
+
     );
-}
-
-
-
-
+};
 const styles = StyleSheet.create({
-    container: {
-        padding: 10
-    },
-    logo: {
-        width: 80,
-        height: 80,
-        alignSelf: 'center',
-        marginTop: 50,
-        marginBottom: 20,
 
-
-    }
 })
-export default LoginScreen;
+
+
+export default RegisterScreen;
+
